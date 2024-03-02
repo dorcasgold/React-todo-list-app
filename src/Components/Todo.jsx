@@ -1,9 +1,9 @@
-function Todo(todo, onDelete) {
+function Todo({ todo, onDelete }) {
   return (
-    <>
+    <div>
       <span>{todo}</span>
-      <input onClick={onDelete} type="submit" value="Submit" />
-    </>
+      <button onClick={onDelete}>Delete</button>
+    </div>
   )
 }
 
