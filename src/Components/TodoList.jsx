@@ -1,19 +1,8 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Todo from './Todo';
 
 function TodoList() {
   const [todos, setTodos] = useState([])
-
-  useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem('todos'));
-    if (storedTodos) {
-      setTodos(storedTodos)
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos]);
 
   function addTodo() {
     const newTodo = prompt("Enter new Todo");
